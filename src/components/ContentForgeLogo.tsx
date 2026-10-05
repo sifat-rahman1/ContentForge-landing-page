@@ -1,56 +1,34 @@
-import React, { useState } from 'react';
-
-const LOGO_URL =
-  'https://lh3.googleusercontent.com/aida/AEtjO1UguF0Nh_xsrWuIjRmByWs3n27X-OhcVuVAQiTr7USncoSg67p8gxEeO7j9vJ7IBGDYOhapKaMZDhDyyErICNDS1-RSfpt5MQ46-7niDjKYwlQvc9kB43sXxbCytdmCmnzolJkpsMQRgJzwdfC64GPq45wuH_HqD2ZOzkZLPaVZxChOi0xwUaA1qxDvEJt61hMR3IoKCFjZ__sJyqc8vCyRozKtazXnbQ_rJOCnEcXAd9roIbcK2nwD';
+import React from 'react';
 
 interface ContentForgeLogoProps {
   className?: string;
 }
 
-export const ContentForgeLogo: React.FC<ContentForgeLogoProps> = ({ className = 'h-8 w-auto' }) => {
-  const [imgError, setImgError] = useState(false);
-
-  if (!imgError) {
-    return (
-      <img
-        alt="ContentForge Logo"
-        className={`${className} object-contain`}
-        src={LOGO_URL}
-        referrerPolicy="no-referrer"
-        onError={() => setImgError(true)}
-      />
-    );
-  }
-
-  // High-precision SVG fallback matching the exact ContentForge emerald squircle icon in Image 1.png
+export const ContentForgeLogo: React.FC<ContentForgeLogoProps> = ({ className = 'h-8 w-8' }) => {
   return (
     <svg
-      viewBox="0 0 36 36"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      viewBox="0 0 40 40"
+      fill="none"
+      className={`${className} shrink-0`}
       aria-label="ContentForge Logo"
     >
-      <rect width="36" height="36" rx="8" fill="#006948" />
+      <rect width="40" height="40" rx="10" fill="#064E3B" />
       <path
-        d="M11 12.5C11 11.3954 11.8954 10.5 13 10.5H19.5L25 16V23.5C25 24.6046 24.1046 25.5 23 25.5H13C11.8954 25.5 11 24.6046 11 23.5V12.5Z"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinejoin="round"
+        d="M12 28L12 14C12 12.8954 12.8954 12 14 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12Z"
+        fill="#10B981"
+        fillOpacity="0.25"
       />
       <path
-        d="M19 10.5V16.5H25"
-        stroke="#85F8C4"
+        d="M14 26V15C14 13.8954 14.8954 13 16 13H19.5C23.0899 13 26 15.9101 26 19.5C26 23.0899 23.0899 26 19.5 26H14Z"
+        stroke="#34D399"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M14.5 19.5H21.5M14.5 22.5H18.5"
-        stroke="#FFFFFF"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
+      <path d="M14 20H24" stroke="#34D399" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="21" cy="20" r="2.5" fill="#10B981" />
+      <path d="M26 14L28 12" stroke="#6EE7B7" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 };
