@@ -1,0 +1,6 @@
+{
+  "name": "ContentForge — AI Content Workspace",
+  "description": "ContentForge helps you generate ideas, hooks, captions, and scripts — then organize and plan everything in one high-precision studio canvas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

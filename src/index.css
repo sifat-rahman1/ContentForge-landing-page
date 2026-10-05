@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette from Reference Config */
+  --color-primary: #006948;
+  --color-primary-container: #00855d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #f5fff7;
+  --color-primary-fixed: #85f8c4;
+  --color-primary-fixed-dim: #68dba9;
+  --color-on-primary-fixed: #002114;
+  --color-on-primary-fixed-variant: #005137;
+  --color-inverse-primary: #68dba9;
+
+  --color-secondary: #2b6954;
+  --color-secondary-container: #adedd3;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #306d58;
+  --color-secondary-fixed: #b0f0d6;
+  --color-secondary-fixed-dim: #95d3ba;
+  --color-on-secondary-fixed: #002117;
+  --color-on-secondary-fixed-variant: #0b513d;
+
+  --color-tertiary: #006947;
+  --color-tertiary-container: #00855b;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #f5fff6;
+  --color-tertiary-fixed: #6ffbbe;
+  --color-tertiary-fixed-dim: #4edea3;
+  --color-on-tertiary-fixed: #002113;
+  --color-on-tertiary-fixed-variant: #005236;
+
+  --color-surface: #f9f9ff;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-dim: #d3daef;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f3ff;
+  --color-surface-container: #e9edff;
+  --color-surface-container-high: #e1e8fd;
+  --color-surface-container-highest: #dce2f7;
+  --color-surface-variant: #dce2f7;
+  --color-surface-tint: #006c4a;
+
+  --color-on-surface: #141b2b;
+  --color-on-surface-variant: #3d4a42;
+  --color-inverse-surface: #293040;
+  --color-inverse-on-surface: #edf0ff;
+
+  --color-background: #f9f9ff;
+  --color-on-background: #141b2b;
+
+  --color-outline: #6d7a72;
+  --color-outline-variant: #bccac0;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* Custom Spacing */
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-margin: 2rem;
+
+  /* Border Radius */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.625rem;
+  --radius-full: 0.75rem;
+
+  /* Font Families */
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-label-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-eyebrow-caps: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-headline-sm: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-headline-xl: "Plus Jakarta Sans", sans-serif;
+  --font-headline-xl-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-label-ui: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff;
+    color: #141b2b;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Custom Typography Scale Classes from Reference Config */
+.text-display-hero {
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.text-display-hero-mobile {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.text-headline-xl {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .text-headline-xl {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+}
+
+.text-headline-xl-mobile {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-headline-lg {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .text-headline-lg {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+}
+
+.text-headline-md {
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+.text-headline-sm {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-body-lg {
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+.text-body-md {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.text-body-sm {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+}
+
+.text-label-ui {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+
+.text-label-mono {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.text-eyebrow-caps {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+/* Material Symbols alignment */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/* UIverse-inspired micro-interaction & hardware-accelerated hover physics */
+.uiverse-btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.uiverse-btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.16) 50%,
+    transparent 80%
+  );
+  transform: translateX(-120%);
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.uiverse-btn-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 20px -4px rgba(0, 105, 72, 0.32), 0 2px 6px -1px rgba(0, 105, 72, 0.15);
+}
+
+.uiverse-btn-primary:hover::after {
+  transform: translateX(120%);
+}
+
+.uiverse-btn-primary:active {
+  transform: translateY(0px) scale(0.985);
+}
+
+.uiverse-btn-secondary {
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.uiverse-btn-secondary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px -4px rgba(20, 27, 43, 0.08);
+}
+
+.uiverse-btn-secondary:active {
+  transform: translateY(0px) scale(0.985);
+}
+
+.uiverse-card {
+  transition:
+    transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.uiverse-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px -8px rgba(20, 27, 43, 0.08), 0 4px 12px -2px rgba(0, 105, 72, 0.05);
+}
+
+.uiverse-chip {
+  transition:
+    transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uiverse-chip:hover {
+  transform: translateY(-1px);
+}
+
+.uiverse-chip:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .uiverse-btn-primary,
+  .uiverse-btn-secondary,
+  .uiverse-card,
+  .uiverse-chip {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Hide scrollbars cleanly where needed while keeping scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
